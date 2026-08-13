@@ -1,0 +1,1712 @@
+index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXORA | Diseño Web</title>
+
+<meta name="description"
+content="NEXORA crea páginas web modernas, profesionales y adaptadas a celulares y computadoras.">
+
+<style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#070707;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(7,7,7,.90);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #222;
+}
+
+.navbar{
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#7c5cff;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#aaa;
+    font-size:14px;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:14px 22px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#7c5cff;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(124,92,255,.25);
+}
+
+.btn-secondary{
+    border:1px solid #383838;
+    background:#111;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:#1b1b1b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:720px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 75% 35%,
+        rgba(124,92,255,.25),
+        transparent 38%
+    ),
+
+    radial-gradient(
+        circle at 20% 80%,
+        rgba(0,180,255,.10),
+        transparent 35%
+    );
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:8px 13px;
+
+    border:1px solid #343434;
+
+    border-radius:30px;
+
+    color:#aaa;
+
+    font-size:13px;
+
+    margin-bottom:25px;
+
+    background:#101010;
+}
+
+.badge span{
+    color:#7c5cff;
+}
+
+.hero h1{
+    font-size:76px;
+
+    line-height:1.02;
+
+    letter-spacing:-4px;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#7c5cff;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#999;
+
+    font-size:19px;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.hero-note{
+    margin-top:25px;
+
+    color:#666;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.stats{
+    background:#0e0e0e;
+
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+}
+
+.stats-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    padding:35px 0;
+}
+
+.stat{
+    text-align:center;
+
+    border-right:1px solid #292929;
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat strong{
+    display:block;
+
+    font-size:30px;
+
+    margin-bottom:5px;
+
+    color:#7c5cff;
+}
+
+.stat span{
+    color:#777;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-heading{
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.section-label{
+    color:#7c5cff;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+}
+
+.section-heading h2{
+    font-size:45px;
+
+    line-height:1.1;
+
+    margin-bottom:15px;
+}
+
+.section-heading p{
+    color:#888;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.services{
+    background:#070707;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.service-card{
+    background:#101010;
+
+    border:1px solid #252525;
+
+    border-radius:12px;
+
+    padding:32px;
+
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#7c5cff;
+}
+
+.service-icon{
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#888;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   PROCESO
+========================= */
+
+.process{
+    background:#0c0c0c;
+}
+
+.process-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+}
+
+.process-card{
+    padding:28px;
+
+    background:#111;
+
+    border:1px solid #262626;
+
+    border-radius:12px;
+}
+
+.number{
+    font-size:14px;
+
+    color:#7c5cff;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+}
+
+.process-card h3{
+    margin-bottom:10px;
+}
+
+.process-card p{
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio{
+    background:#070707;
+}
+
+.portfolio-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.project{
+    background:#111;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+
+    border-color:#7c5cff;
+}
+
+.project-image{
+    height:190px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:48px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #171717,
+        #25203c
+    );
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:8px;
+}
+
+.project-content p{
+    color:#888;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+}
+
+.demo{
+    color:#7c5cff;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   PLANES
+========================= */
+
+.pricing{
+    background:#0c0c0c;
+}
+
+.pricing-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.price-card{
+    background:#111;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+.price-card.featured{
+    border:2px solid #7c5cff;
+
+    transform:scale(1.02);
+}
+
+.price-card h3{
+    font-size:21px;
+}
+
+.price-description{
+    color:#777;
+
+    font-size:14px;
+
+    margin-top:7px;
+}
+
+.price{
+    font-size:38px;
+
+    font-weight:bold;
+
+    margin:25px 0;
+}
+
+.price small{
+    font-size:14px;
+
+    color:#777;
+
+    font-weight:normal;
+}
+
+.features{
+    list-style:none;
+
+    color:#999;
+
+    margin-bottom:28px;
+}
+
+.features li{
+    margin:12px 0;
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.benefits{
+    background:#070707;
+}
+
+.benefits-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.benefit{
+    padding:28px;
+
+    border:1px solid #272727;
+
+    background:#101010;
+
+    border-radius:12px;
+}
+
+.benefit h3{
+    margin-bottom:8px;
+}
+
+.benefit p{
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact{
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(124,92,255,.16),
+        transparent 55%
+    );
+}
+
+.contact-box{
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:55px 30px;
+
+    border:1px solid #292929;
+
+    border-radius:15px;
+
+    background:#101010;
+}
+
+.contact-box h2{
+    font-size:42px;
+
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#888;
+
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#7c5cff;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-size:45px;
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+
+    opacity:.85;
+}
+
+.cta .btn{
+    background:#080808;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 0;
+
+    background:#050505;
+
+    text-align:center;
+
+    color:#666;
+}
+
+.footer-logo{
+    color:white;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.footer-logo span{
+    color:#7c5cff;
+}
+
+.instagram{
+    display:inline-block;
+
+    margin-top:12px;
+
+    color:#7c5cff;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:53px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+
+        gap:25px;
+    }
+
+    .stat{
+        border:none;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-heading h2{
+        font-size:35px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid,
+    .benefits-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box h2{
+        font-size:33px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+NEX<span>ORA</span>
+</a>
+
+<nav>
+
+<a href="#servicios">
+Servicios
+</a>
+
+<a href="#proceso">
+Proceso
+</a>
+
+<a href="#portfolio">
+Portfolio
+</a>
+
+<a href="#planes">
+Planes
+</a>
+
+</nav>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-primary"
+>
+Contactar
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+<span>●</span> NEXORA DIGITAL STUDIO
+</div>
+
+<h1>
+Creamos páginas que hacen crecer tu
+<span>negocio.</span>
+</h1>
+
+<p>
+Diseñamos sitios web modernos, profesionales
+y adaptados a celulares y computadoras para
+que tu negocio tenga una presencia digital
+que realmente destaque.
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="#portfolio"
+class="btn btn-primary"
+>
+Ver nuestros proyectos
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-secondary"
+>
+Hablar con NEXORA
+</a>
+
+</div>
+
+<div class="hero-note">
+Diseño web · Desarrollo · Presencia digital
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>01</strong>
+<span>Diseño personalizado</span>
+</div>
+
+<div class="stat">
+<strong>02</strong>
+<span>Adaptado a celular</span>
+</div>
+
+<div class="stat">
+<strong>03</strong>
+<span>Experiencia moderna</span>
+</div>
+
+<div class="stat">
+<strong>04</strong>
+<span>Atención personalizada</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+
+<section
+class="services"
+id="servicios"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+QUÉ HACEMOS
+</div>
+
+<h2>
+Todo lo que necesitás para destacar online.
+</h2>
+
+<p>
+Creamos soluciones digitales pensadas para
+negocios, emprendimientos y profesionales.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💻
+</div>
+
+<h3>
+Páginas Web
+</h3>
+
+<p>
+Diseñamos páginas modernas y profesionales
+adaptadas a la identidad de cada negocio.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+📱
+</div>
+
+<h3>
+Diseño Responsive
+</h3>
+
+<p>
+Tu página se adapta perfectamente a celulares,
+tablets y computadoras.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🚀
+</div>
+
+<h3>
+Publicación
+</h3>
+
+<p>
+Te ayudamos a dejar tu página online para
+que puedas compartirla con tus clientes.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Identidad Digital
+</h3>
+
+<p>
+Diseñamos una presencia online coherente
+y profesional para tu marca.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+⚡
+</div>
+
+<h3>
+Optimización
+</h3>
+
+<p>
+Buscamos que tu sitio sea rápido, claro
+y fácil de utilizar.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🛠️
+</div>
+
+<h3>
+Mantenimiento
+</h3>
+
+<p>
+Podemos ayudarte a actualizar contenido
+y realizar mejoras cuando las necesites.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROCESO
+========================= -->
+
+<section
+class="process"
+id="proceso"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+CÓMO TRABAJAMOS
+</div>
+
+<h2>
+Simple, claro y profesional.
+</h2>
+
+<p>
+Nos encargamos del proceso para que vos
+puedas concentrarte en tu negocio.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<div class="number">
+01 / IDEA
+</div>
+
+<h3>
+Nos contás tu proyecto
+</h3>
+
+<p>
+Conocemos tu negocio, tus objetivos
+y lo que necesitás.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+02 / DISEÑO
+</div>
+
+<h3>
+Creamos el diseño
+</h3>
+
+<p>
+Armamos una propuesta visual
+pensada para tu marca.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+03 / DESARROLLO
+</div>
+
+<h3>
+Construimos tu web
+</h3>
+
+<p>
+Convertimos el diseño en una página
+funcional y adaptable.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+04 / LANZAMIENTO
+</div>
+
+<h3>
+Publicamos tu página
+</h3>
+
+<p>
+Te entregamos tu sitio listo para
+compartir con tus clientes.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section
+class="portfolio"
+id="portfolio"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+PORTFOLIO
+</div>
+
+<h2>
+Algunos proyectos de NEXORA.
+</h2>
+
+<p>
+Proyectos conceptuales creados para mostrar
+distintos estilos de páginas web.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<div class="project">
+
+<div class="project-image">
+🏋️
+</div>
+
+<div class="project-content">
+
+<h3>
+FORGE GYM
+</h3>
+
+<p>
+Página web conceptual para gimnasio,
+con planes, horarios y contacto.
+</p>
+
+<a
+href="forge-gym/index.html"
+class="demo"
+>
+PROYECTO DEMO →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+💈
+</div>
+
+<div class="project-content">
+
+<h3>
+NOVA BARBER
+</h3>
+
+<p>
+Concepto de página para barbería
+con servicios y reservas.
+</p>
+
+<a
+href="nova-barber/index.html"
+class="demo"
+>
+PROYECTO DEMO →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+🧘
+</div>
+
+<div class="project-content">
+
+<h3>
+ROXANA YOGA
+</h3>
+
+<p>
+Concepto de página para clases de yoga
+y bienestar.
+</p>
+
+<a
+href="yoga-roxana/index.html"
+class="demo"
+>
+PROYECTO DEMO →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PLANES
+========================= -->
+
+<section
+class="pricing"
+id="planes"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+PLANES
+</div>
+
+<h2>
+Elegí cómo empezar.
+</h2>
+
+<p>
+Planes orientativos. El precio final depende
+de las características del proyecto.
+</p>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+<div class="price-card">
+
+<h3>
+START
+</h3>
+
+<p class="price-description">
+Para empezar tu presencia online.
+</p>
+
+<div class="price">
+$30.000
+<small>desde</small>
+</div>
+
+<ul class="features">
+
+<li>✓ Página de presentación</li>
+
+<li>✓ Diseño personalizado</li>
+
+<li>✓ Adaptación a celular</li>
+
+<li>✓ Botones de contacto</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-secondary"
+>
+Consultar
+</a>
+
+</div>
+
+
+
+<div class="price-card featured">
+
+<h3>
+PRO
+</h3>
+
+<p class="price-description">
+Para negocios que quieren destacar.
+</p>
+
+<div class="price">
+$50.000
+<small>desde</small>
+</div>
+
+<ul class="features">
+
+<li>✓ Sitio web completo</li>
+
+<li>✓ Diseño personalizado</li>
+
+<li>✓ Adaptado a todos los dispositivos</li>
+
+<li>✓ Formularios</li>
+
+<li>✓ Animaciones</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-primary"
+>
+Elegir PRO
+</a>
+
+</div>
+
+
+
+<div class="price-card">
+
+<h3>
+PREMIUM
+</h3>
+
+<p class="price-description">
+Para proyectos más completos.
+</p>
+
+<div class="price">
+$80.000
+<small>desde</small>
+</div>
+
+<ul class="features">
+
+<li>✓ Sitio web avanzado</li>
+
+<li>✓ Varias secciones</li>
+
+<li>✓ Diseño exclusivo</li>
+
+<li>✓ Funciones personalizadas</li>
+
+<li>✓ Soporte</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-secondary"
+>
+Consultar
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     BENEFICIOS
+========================= -->
+
+<section class="benefits">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+¿POR QUÉ NEXORA?
+</div>
+
+<h2>
+Tu negocio merece una buena primera impresión.
+</h2>
+
+</div>
+
+
+<div class="benefits-grid">
+
+
+<div class="benefit">
+
+<h3>
+✨ Diseño moderno
+</h3>
+
+<p>
+Creamos páginas con una estética actual
+y profesional.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+📱 Pensadas para celular
+</h3>
+
+<p>
+La mayoría de tus clientes puede entrar
+desde el teléfono. Tu página estará preparada.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+🎯 Enfoque en tu negocio
+</h3>
+
+<p>
+No usamos una solución idéntica para todos.
+Adaptamos el proyecto a cada cliente.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+🤝 Atención personalizada
+</h3>
+
+<p>
+Te acompañamos durante el proceso y
+escuchamos tus ideas.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section class="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-label">
+EMPECEMOS
+</div>
+
+<h2>
+¿Tenés un proyecto en mente?
+</h2>
+
+<p>
+Contanos qué necesitás y hablá directamente
+con NEXORA por Instagram.
+</p>
+
+<div class="contact-buttons">
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-primary"
+>
+📩 Hablar con NEXORA
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-secondary"
+>
+📸 Instagram
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA FINAL
+========================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Hagamos realidad tu próxima web.
+</h2>
+
+<p>
+NEXORA · Diseño web y presencia digital.
+</p>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn"
+>
+Contactar ahora
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+NEX<span>ORA</span>
+</div>
+
+<p>
+Diseño web · Desarrollo · Presencia digital
+</p>
+
+<a
+class="instagram"
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+>
+Instagram: @nexora.web.ar
+</a>
+
+<br><br>
+
+<p>
+© 2026 NEXORA. Todos los derechos reservados.
+</p>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
