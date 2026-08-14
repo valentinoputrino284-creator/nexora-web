@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FORGE GYM | Entrená. Superate.</title>
+
+<meta name="description"
+content="FORGE GYM - Gimnasio, entrenamiento y bienestar. Proyecto realizado por NEXORA.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(8,8,8,.94);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #242424;
+}
+
+.navbar{
+    min-height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ff4d00;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#aaa;
+    font-size:14px;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:14px 22px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.btn-orange{
+    background:#ff4d00;
+    color:#fff;
+}
+
+.btn-orange:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(255,77,0,.22);
+}
+
+.btn-dark{
+    background:#151515;
+    border:1px solid #383838;
+}
+
+.btn-dark:hover{
+    background:#202020;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:720px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle at 80% 35%,
+        rgba(255,77,0,.25),
+        transparent 40%
+    );
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.tag{
+    color:#ff6a2b;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:76px;
+
+    line-height:1;
+
+    letter-spacing:-4px;
+
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#ff4d00;
+}
+
+.hero p{
+    color:#999;
+
+    font-size:19px;
+
+    max-width:650px;
+
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.note{
+    margin-top:25px;
+
+    color:#666;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    background:#101010;
+
+    border-top:1px solid #242424;
+
+    border-bottom:1px solid #242424;
+}
+
+.stats-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    padding:35px 0;
+}
+
+.stat{
+    text-align:center;
+
+    border-right:1px solid #292929;
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat strong{
+    display:block;
+
+    color:#ff4d00;
+
+    font-size:28px;
+}
+
+.stat span{
+    color:#777;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+.heading{
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+}
+
+.heading h2{
+    font-size:43px;
+
+    line-height:1.1;
+
+    margin:10px 0 15px;
+}
+
+.heading p{
+    color:#888;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+    background:#111;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    border-color:#ff4d00;
+}
+
+.icon{
+    font-size:40px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   ENTRENAMIENTO
+========================= */
+
+.training{
+    background:#0e0e0e;
+}
+
+.training-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.training-card{
+    background:#151515;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    padding:30px;
+}
+
+.training-card h3{
+    color:#ff6a2b;
+
+    margin-bottom:10px;
+}
+
+.training-card p{
+    color:#888;
+}
+
+
+/* =========================
+   PLANES
+========================= */
+
+.plans{
+    background:#080808;
+}
+
+.plan-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.plan{
+    background:#121212;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+.plan.featured{
+    border:2px solid #ff4d00;
+
+    transform:scale(1.02);
+}
+
+.plan h3{
+    font-size:22px;
+}
+
+.price{
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin:20px 0;
+}
+
+.price small{
+    color:#777;
+
+    font-size:14px;
+
+    font-weight:normal;
+}
+
+.plan ul{
+    list-style:none;
+
+    color:#999;
+
+    margin-bottom:25px;
+}
+
+.plan li{
+    margin:10px 0;
+}
+
+
+/* =========================
+   HORARIOS
+========================= */
+
+.schedule{
+    background:#0e0e0e;
+}
+
+.schedule-box{
+    max-width:850px;
+
+    margin:auto;
+
+    border:1px solid #292929;
+
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+.schedule-row{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    padding:20px;
+
+    background:#121212;
+
+    border-bottom:1px solid #292929;
+}
+
+.schedule-row:last-child{
+    border:none;
+}
+
+.schedule-row span:last-child{
+    text-align:right;
+
+    color:#ff6a2b;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact{
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,77,0,.15),
+        transparent 55%
+    );
+}
+
+.contact-box{
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    border:1px solid #292929;
+
+    border-radius:15px;
+
+    background:#111;
+}
+
+.contact-box h2{
+    font-size:42px;
+
+    margin:10px 0 15px;
+}
+
+.contact-box p{
+    color:#888;
+
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#ff4d00;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-size:44px;
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+.cta .btn{
+    background:#080808;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+
+    text-align:center;
+
+    color:#666;
+
+    padding:40px 0;
+}
+
+.footer-logo{
+    color:#fff;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.footer-logo span{
+    color:#ff4d00;
+}
+
+.nexora{
+    display:inline-block;
+
+    margin-top:12px;
+
+    color:#ff4d00;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:54px;
+
+        letter-spacing:-2px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+
+        gap:25px;
+    }
+
+    .stat{
+        border:none;
+    }
+
+    .cards,
+    .training-grid,
+    .plan-grid{
+        grid-template-columns:1fr;
+    }
+
+    .plan.featured{
+        transform:none;
+    }
+
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .heading h2{
+        font-size:35px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box h2{
+        font-size:32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+FORGE<span>GYM</span>
+</a>
+
+<nav>
+
+<a href="#nosotros">
+Nosotros
+</a>
+
+<a href="#entrenamiento">
+Entrenamiento
+</a>
+
+<a href="#planes">
+Planes
+</a>
+
+<a href="#horarios">
+Horarios
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</nav>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-orange"
+>
+Contactar
+</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="tag">
+FORGE GYM · PROYECTO DEMO
+</div>
+
+<h1>
+Entrená.
+<span>Superate.</span>
+</h1>
+
+<p>
+Un espacio diseñado para quienes quieren
+entrenar con objetivos claros, mejorar su
+rendimiento y disfrutar el proceso.
+</p>
+
+<div class="buttons">
+
+<a
+href="#planes"
+class="btn btn-orange"
+>
+Ver planes
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-dark"
+>
+Consultar
+</a>
+
+</div>
+
+<div class="note">
+Proyecto conceptual desarrollado por NEXORA.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+
+<strong>🏋️</strong>
+
+<span>
+Equipamiento
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>🔥</strong>
+
+<span>
+Entrenamientos
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>👥</strong>
+
+<span>
+Comunidad
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>⏰</strong>
+
+<span>
+Amplios horarios
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NOSOTROS -->
+
+<section id="nosotros">
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+NUESTRO GYM
+</div>
+
+<h2>
+Todo lo que necesitás para entrenar.
+</h2>
+
+<p>
+Un espacio completo para mejorar tu entrenamiento
+y alcanzar tus objetivos.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">
+🏋️
+</div>
+
+<h3>
+Zona de musculación
+</h3>
+
+<p>
+Equipamiento para trabajar todos los grupos
+musculares.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🏃
+</div>
+
+<h3>
+Área de cardio
+</h3>
+
+<p>
+Cintas, bicicletas y espacios para complementar
+tu entrenamiento.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+👨‍🏫
+</div>
+
+<h3>
+Profesionales
+</h3>
+
+<p>
+Orientación para ayudarte a entrenar de forma
+segura y organizada.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ENTRENAMIENTO -->
+
+<section
+class="training"
+id="entrenamiento"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+ENTRENAMIENTO
+</div>
+
+<h2>
+Entrená con un objetivo.
+</h2>
+
+<p>
+Elegí el tipo de entrenamiento que mejor
+se adapte a vos.
+</p>
+
+</div>
+
+
+<div class="training-grid">
+
+
+<div class="training-card">
+
+<h3>
+💪 Fuerza
+</h3>
+
+<p>
+Entrenamientos orientados al desarrollo
+de fuerza y rendimiento.
+</p>
+
+</div>
+
+
+<div class="training-card">
+
+<h3>
+🔥 Funcional
+</h3>
+
+<p>
+Ejercicios dinámicos para trabajar
+distintas capacidades físicas.
+</p>
+
+</div>
+
+
+<div class="training-card">
+
+<h3>
+🏃 Cardio
+</h3>
+
+<p>
+Sesiones para complementar tu rutina
+y mejorar tu resistencia.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANES -->
+
+<section
+class="plans"
+id="planes"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+MEMBRESÍAS
+</div>
+
+<h2>
+Elegí tu plan.
+</h2>
+
+<p>
+Precios ficticios utilizados para esta
+demostración.
+</p>
+
+</div>
+
+
+<div class="plan-grid">
+
+
+<div class="plan">
+
+<h3>
+BÁSICO
+</h3>
+
+<div class="price">
+$20.000
+<small>/ mes</small>
+</div>
+
+<ul>
+
+<li>✓ Acceso al gimnasio</li>
+
+<li>✓ Zona de musculación</li>
+
+<li>✓ Área de cardio</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-orange"
+>
+Consultar
+</a>
+
+</div>
+
+
+<div class="plan featured">
+
+<h3>
+FULL
+</h3>
+
+<div class="price">
+$30.000
+<small>/ mes</small>
+</div>
+
+<ul>
+
+<li>✓ Acceso ilimitado</li>
+
+<li>✓ Musculación</li>
+
+<li>✓ Cardio</li>
+
+<li>✓ Clases grupales</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-orange"
+>
+Elegir FULL
+</a>
+
+</div>
+
+
+<div class="plan">
+
+<h3>
+PREMIUM
+</h3>
+
+<div class="price">
+$40.000
+<small>/ mes</small>
+</div>
+
+<ul>
+
+<li>✓ Acceso ilimitado</li>
+
+<li>✓ Clases grupales</li>
+
+<li>✓ Seguimiento</li>
+
+<li>✓ Beneficios especiales</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-orange"
+>
+Consultar
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HORARIOS -->
+
+<section
+class="schedule"
+id="horarios"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+HORARIOS
+</div>
+
+<h2>
+Entrená cuando quieras.
+</h2>
+
+<p>
+Horarios ficticios para este proyecto demo.
+</p>
+
+</div>
+
+
+<div class="schedule-box">
+
+
+<div class="schedule-row">
+
+<span>
+Lunes a viernes
+</span>
+
+<span>
+07:00 — 23:00
+</span>
+
+</div>
+
+
+<div class="schedule-row">
+
+<span>
+Sábados
+</span>
+
+<span>
+09:00 — 18:00
+</span>
+
+</div>
+
+
+<div class="schedule-row">
+
+<span>
+Domingos
+</span>
+
+<span>
+10:00 — 14:00
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section
+class="contact"
+id="contacto"
+>
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="tag">
+CONTACTO
+</div>
+
+<h2>
+¿Querés empezar?
+</h2>
+
+<p>
+Consultá disponibilidad, planes y toda la información
+directamente con NEXORA.
+</p>
+
+<div class="contact-buttons">
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-orange"
+>
+📸 Contactar por Instagram
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-dark"
+>
+@NEXORA.WEB.AR
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Tu próximo entrenamiento empieza hoy.
+</h2>
+
+<p>
+FORGE GYM · Proyecto demostrativo de NEXORA.
+</p>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn"
+>
+Consultar ahora
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+FORGE<span>GYM</span>
+</div>
+
+<p>
+Proyecto conceptual creado por NEXORA.
+</p>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="nexora"
+>
+NEXORA · @nexora.web.ar
+</a>
+
+<br><br>
+
+<p>
+© 2026 FORGE GYM · Proyecto Demo
+</p>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
