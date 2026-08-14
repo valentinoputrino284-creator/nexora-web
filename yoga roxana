@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roxana Yoga | Bienestar y movimiento</title>
+
+<meta name="description"
+content="Roxana Yoga - Clases de yoga, movimiento y bienestar. Proyecto demo creado por NEXORA.">
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f5ef;
+    color:#25352c;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(247,245,239,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #ddd9cf;
+}
+
+.navbar{
+    min-height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:Georgia, serif;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#718b72;
+}
+
+nav{
+    display:flex;
+
+    gap:25px;
+}
+
+nav a{
+    color:#68736c;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#34483b;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:14px 22px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.btn-green{
+    background:#718b72;
+
+    color:#fff;
+}
+
+.btn-green:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 30px
+    rgba(113,139,114,.25);
+}
+
+.btn-light{
+    background:#fff;
+
+    border:1px solid #d8d5cb;
+
+    color:#53645a;
+}
+
+.btn-light:hover{
+    background:#eeece5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:720px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(113,139,114,.20),
+        transparent 40%
+    ),
+
+    linear-gradient(
+        135deg,
+        #f7f5ef,
+        #e9eee6
+    );
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.tag{
+    color:#718b72;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-family:Georgia, serif;
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#718b72;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#68736c;
+
+    font-size:19px;
+
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.note{
+    margin-top:25px;
+
+    color:#8b918c;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info{
+    background:#fff;
+
+    border-top:1px solid #e0ddd4;
+
+    border-bottom:1px solid #e0ddd4;
+}
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    padding:35px 0;
+}
+
+.info-item{
+    text-align:center;
+
+    border-right:1px solid #e0ddd4;
+}
+
+.info-item:last-child{
+    border:none;
+}
+
+.info-item strong{
+    display:block;
+
+    color:#718b72;
+
+    font-size:28px;
+}
+
+.info-item span{
+    color:#78827b;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+.heading{
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+}
+
+.heading h2{
+    font-family:Georgia, serif;
+
+    font-size:43px;
+
+    line-height:1.1;
+
+    margin:10px 0 15px;
+}
+
+.heading p{
+    color:#768078;
+}
+
+
+/* =========================
+   CLASES
+========================= */
+
+.classes{
+    background:#f7f5ef;
+}
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+
+    border:1px solid #dedbd1;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    border-color:#9bad9a;
+}
+
+.icon{
+    font-size:40px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#778078;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.benefits{
+    background:#e9eee6;
+}
+
+.benefit-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.benefit{
+    background:rgba(255,255,255,.7);
+
+    border:1px solid #d5ddd2;
+
+    border-radius:16px;
+
+    padding:30px;
+}
+
+.benefit h3{
+    color:#58715b;
+
+    margin-bottom:10px;
+}
+
+.benefit p{
+    color:#748078;
+}
+
+
+/* =========================
+   PLANES
+========================= */
+
+.plans{
+    background:#fff;
+}
+
+.plan-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.plan{
+    background:#f8f7f2;
+
+    border:1px solid #dedbd1;
+
+    border-radius:16px;
+
+    padding:32px;
+}
+
+.plan.featured{
+    border:2px solid #718b72;
+
+    transform:scale(1.02);
+}
+
+.plan h3{
+    font-size:22px;
+}
+
+.price{
+    font-size:38px;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+    color:#526a55;
+}
+
+.price small{
+    color:#858b86;
+
+    font-size:14px;
+
+    font-weight:normal;
+}
+
+.plan ul{
+    list-style:none;
+
+    color:#737d76;
+
+    margin-bottom:25px;
+}
+
+.plan li{
+    margin:10px 0;
+}
+
+
+/* =========================
+   HORARIOS
+========================= */
+
+.schedule{
+    background:#f7f5ef;
+}
+
+.schedule-box{
+    max-width:850px;
+
+    margin:auto;
+
+    border:1px solid #dedbd1;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+.schedule-row{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    padding:20px;
+
+    background:#fff;
+
+    border-bottom:1px solid #dedbd1;
+}
+
+.schedule-row:last-child{
+    border:none;
+}
+
+.schedule-row span:last-child{
+    text-align:right;
+
+    color:#718b72;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact{
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(113,139,114,.16),
+        transparent 55%
+    );
+}
+
+.contact-box{
+    max-width:750px;
+
+    margin:auto;
+
+    padding:50px 30px;
+
+    text-align:center;
+
+    border:1px solid #d8d5cb;
+
+    border-radius:18px;
+
+    background:#fff;
+}
+
+.contact-box h2{
+    font-family:Georgia, serif;
+
+    font-size:42px;
+
+    margin:10px 0 15px;
+}
+
+.contact-box p{
+    color:#78827b;
+
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#718b72;
+
+    color:#fff;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-family:Georgia, serif;
+
+    font-size:44px;
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+
+    opacity:.9;
+}
+
+.cta .btn{
+    background:#fff;
+
+    color:#536a56;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#25352c;
+
+    text-align:center;
+
+    color:#aeb8b0;
+
+    padding:40px 0;
+}
+
+.footer-logo{
+    color:#fff;
+
+    font-family:Georgia, serif;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.footer-logo span{
+    color:#9eb29e;
+}
+
+.nexora{
+    display:inline-block;
+
+    margin-top:12px;
+
+    color:#b6c9b6;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:54px;
+
+        letter-spacing:-2px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+
+        gap:25px;
+    }
+
+    .info-item{
+        border:none;
+    }
+
+    .cards,
+    .benefit-grid,
+    .plan-grid{
+        grid-template-columns:1fr;
+    }
+
+    .plan.featured{
+        transform:none;
+    }
+
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .heading h2{
+        font-size:35px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box h2{
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+Roxana <span>Yoga</span>
+</a>
+
+<nav>
+
+<a href="#clases">
+Clases
+</a>
+
+<a href="#beneficios">
+Beneficios
+</a>
+
+<a href="#planes">
+Planes
+</a>
+
+<a href="#horarios">
+Horarios
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</nav>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-green"
+>
+Consultar
+</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="tag">
+ROXANA YOGA · PROYECTO DEMO
+</div>
+
+<h1>
+Respirá.
+<span>Conectá.</span>
+Movete.
+</h1>
+
+<p>
+Un espacio para conectar con tu cuerpo,
+mejorar tu movilidad y encontrar un momento
+de calma durante la semana.
+</p>
+
+<div class="buttons">
+
+<a
+href="#clases"
+class="btn btn-green"
+>
+Ver clases
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-light"
+>
+Consultar
+</a>
+
+</div>
+
+<div class="note">
+Profesora: Roxana · Proyecto conceptual desarrollado por NEXORA.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INFO -->
+
+<div class="info">
+
+<div class="container info-grid">
+
+<div class="info-item">
+
+<strong>🧘</strong>
+
+<span>
+Yoga
+</span>
+
+</div>
+
+<div class="info-item">
+
+<strong>🌿</strong>
+
+<span>
+Bienestar
+</span>
+
+</div>
+
+<div class="info-item">
+
+<strong>🌬️</strong>
+
+<span>
+Respiración
+</span>
+
+</div>
+
+<div class="info-item">
+
+<strong>✨</strong>
+
+<span>
+Movilidad
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CLASES -->
+
+<section
+class="classes"
+id="clases"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+CLASES
+</div>
+
+<h2>
+Encontrá tu práctica.
+</h2>
+
+<p>
+Distintas opciones para acompañarte
+en tu proceso.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">
+🌿
+</div>
+
+<h3>
+Yoga suave
+</h3>
+
+<p>
+Una práctica tranquila enfocada en movilidad,
+respiración y relajación.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🧘
+</div>
+
+<h3>
+Yoga integral
+</h3>
+
+<p>
+Una clase equilibrada que combina movimiento,
+respiración y concentración.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🌅
+</div>
+
+<h3>
+Yoga & relajación
+</h3>
+
+<p>
+Un espacio para bajar el ritmo y terminar
+la práctica con calma.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+
+<section
+class="benefits"
+id="beneficios"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+LA EXPERIENCIA
+</div>
+
+<h2>
+Un momento para vos.
+</h2>
+
+<p>
+La práctica puede ayudarte a incorporar
+movimiento y momentos de pausa.
+</p>
+
+</div>
+
+
+<div class="benefit-grid">
+
+
+<div class="benefit">
+
+<h3>
+🌱 Movimiento
+</h3>
+
+<p>
+Trabajá movilidad y coordinación de una
+forma progresiva.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+🌬️ Respiración
+</h3>
+
+<p>
+Aprendé ejercicios de respiración para
+acompañar tu práctica.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+🕊️ Relajación
+</h3>
+
+<p>
+Un espacio pensado para desconectar
+de la rutina.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANES -->
+
+<section
+class="plans"
+id="planes"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+CLASES Y PLANES
+</div>
+
+<h2>
+Elegí cómo empezar.
+</h2>
+
+<p>
+Precios ficticios utilizados únicamente
+para esta demostración.
+</p>
+
+</div>
+
+
+<div class="plan-grid">
+
+
+<div class="plan">
+
+<h3>
+CLASE SUELTA
+</h3>
+
+<div class="price">
+$5.000
+</div>
+
+<ul>
+
+<li>✓ 1 clase</li>
+
+<li>✓ Práctica guiada</li>
+
+<li>✓ Nivel inicial</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-green"
+>
+Consultar
+</a>
+
+</div>
+
+
+<div class="plan featured">
+
+<h3>
+PACK 4 CLASES
+</h3>
+
+<div class="price">
+$17.000
+</div>
+
+<ul>
+
+<li>✓ 4 clases</li>
+
+<li>✓ Seguimiento</li>
+
+<li>✓ Horarios flexibles</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-green"
+>
+Elegir pack
+</a>
+
+</div>
+
+
+<div class="plan">
+
+<h3>
+MENSUAL
+</h3>
+
+<div class="price">
+$25.000
+</div>
+
+<ul>
+
+<li>✓ Clases durante el mes</li>
+
+<li>✓ Seguimiento</li>
+
+<li>✓ Comunidad</li>
+
+</ul>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-green"
+>
+Consultar
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HORARIOS -->
+
+<section
+class="schedule"
+id="horarios"
+>
+
+<div class="container">
+
+<div class="heading">
+
+<div class="tag">
+HORARIOS
+</div>
+
+<h2>
+Elegí tu momento.
+</h2>
+
+<p>
+Horarios ficticios para este proyecto demo.
+</p>
+
+</div>
+
+
+<div class="schedule-box">
+
+
+<div class="schedule-row">
+
+<span>
+Lunes
+</span>
+
+<span>
+18:00 — 19:00
+</span>
+
+</div>
+
+
+<div class="schedule-row">
+
+<span>
+Miércoles
+</span>
+
+<span>
+18:00 — 19:00
+</span>
+
+</div>
+
+
+<div class="schedule-row">
+
+<span>
+Viernes
+</span>
+
+<span>
+17:30 — 18:30
+</span>
+
+</div>
+
+
+<div class="schedule-row">
+
+<span>
+Sábados
+</span>
+
+<span>
+10:00 — 11:00
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section
+class="contact"
+id="contacto"
+>
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="tag">
+CONTACTO
+</div>
+
+<h2>
+¿Querés empezar?
+</h2>
+
+<p>
+Consultá horarios y disponibilidad a través
+del Instagram de NEXORA.
+</p>
+
+<div class="contact-buttons">
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-green"
+>
+📸 Consultar por Instagram
+</a>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn btn-light"
+>
+@nexora.web.ar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Regalate un momento para vos.
+</h2>
+
+<p>
+Roxana Yoga · Proyecto demostrativo de NEXORA.
+</p>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="btn"
+>
+Consultar ahora
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-logo">
+Roxana <span>Yoga</span>
+</div>
+
+<p>
+Profesora: Roxana
+</p>
+
+<a
+href="https://www.instagram.com/nexora.web.ar/"
+target="_blank"
+class="nexora"
+>
+NEXORA · @nexora.web.ar
+</a>
+
+<br><br>
+
+<p>
+© 2026 Roxana Yoga · Proyecto Demo
+</p>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
